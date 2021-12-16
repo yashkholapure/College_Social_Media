@@ -27,9 +27,7 @@ require('../db/conn')
 // const upload=multer({storage:storage})
 
 
-router.get("/",(req,res)=>{
-    res.send(`youtube router`)
-})
+//  
 
 //create new user
 router.post('/reg',async(req,res)=>{
