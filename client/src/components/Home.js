@@ -32,10 +32,17 @@ const Home = () => {
             method:"GET",
             headers: {"Content-Type":"application/json"},
              //credentials:"include"
+             
         })
         console.log("tufdgf")
         //const data=await res.json()
-        const data= await res.json();
+        // const che=await res.text() 
+        // console.log(che)
+
+           const data= await res.json();
+           
+
+         
         console.log("pk")
          console.log(data)
           setUserData(data)

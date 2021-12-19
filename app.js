@@ -3,7 +3,7 @@
 const express = require("express")
 const app=express()
  const jwt = require("jsonwebtoken")
- const cookieParser=require('cookie-parser')
+  const cookieParser=require('cookie-parser')
  const bodyParser =require("body-parser")
   
  app.use(bodyParser.json({ limit: "10mb", extended: true }));
@@ -45,7 +45,7 @@ console.log(`connection i s set up at  `)
  
 //step heroku
 
-if(process.env.NODE_ENV=="production"){
+if(process.env.NODE_ENV==="production"){
   app.use(express.static("client/build"))
 }
 
