@@ -35,7 +35,7 @@ const Home = () => {
              
         })
         console.log("tufdgf")
-        //const data=await res.json()
+        //const data=await res.json()  
         // const che=await res.text() 
         // console.log(che)
 
