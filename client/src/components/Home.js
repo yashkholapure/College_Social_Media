@@ -5,25 +5,10 @@ import React,{useState,useEffect} from 'react'
 const Home = () => {
 
       
-        //    const [stuData,setStud]=useState([])
-        //    useEffect(()=>{
-        //      fetch('/allpost',{
-        //         headers: {"Content-Type":"application/json"},
-        //      }).then(res=>res.json())
-        //      .then(result=>{
-        //          console.log(result)
-        //          setStud(result.messages)
-        //      })
-        //    },[])
+             
          
         
-        //  const tableRow=stuData.map((info)=>{
-        //      return(
-        //          <tr>
-        //              <td>{info.userData}</td>
-        //          </tr>
-        //      )
-        //  })
+        
         const [userData,setUserData]=useState([]);
 
         const userContact=async()=>{

@@ -25,13 +25,13 @@ const {state,dispatch}=useContext(UserContext)
 
     const data= res.json()
     if (res.status==400 || !data) {
-        window.alert("invalid")
+        window.alert("invalid credentials")
         console.log("invalid")
     }
     else{
         //dispatch({type:"USER",payload:true})
         dispatch({type:"USER",payload:true})
-        window.alert("succes")
+        window.alert("Login successful")
         console.log("succes")
          
         navigate("/post")

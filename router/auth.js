@@ -27,9 +27,10 @@ require('../db/conn')
 // const upload=multer({storage:storage})
 
 
-//  
+
 
 //create new user
+
 router.post('/reg',async(req,res)=>{
     // console.log(req.body) 
     // res.json({message: req.body})
@@ -57,7 +58,8 @@ router.post('/reg',async(req,res)=>{
 })
 
 
-//login
+//login route
+
 router.post('/login',async(req,res)=>{
     // console.log(req.body) 
     //   res.json({message: "auu"})
@@ -83,13 +85,13 @@ router.post('/login',async(req,res)=>{
           })
          
           if (!isMatch) {
-            res.status(400).json({error:"invalid"})
+            res.status(400).json({error:"invalid credentials"})
           }else{
             res.json({message:"login successful"})
           }
 
          }else{
-          res.status(400).json({error: "invalid"})
+          res.status(400).json({error: "invalid credentials"})
          }
           
            
@@ -135,12 +137,14 @@ router.get("/getdata",authenticate,(req,res)=>{
             const user=new All({name,message,selectedFile})
             await user.save();
      
-           res.status(201).json({message:"message post successful"})
+           res.status(201).json({message:"message posted successfully"})
           }catch(err){
         console.log(err)
         console.log("why")
     }
         })
+
+          //home route
 
         router.get('/allpost',(req,res)=>{
          All.find({},(err,All)=> {
@@ -160,7 +164,7 @@ router.get("/getdata",authenticate,(req,res)=>{
           
         })
 
-         
+         //logout route
 
     router.get("/logout",(req,res)=>{
       console.log("h logout ")

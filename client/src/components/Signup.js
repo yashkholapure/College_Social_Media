@@ -35,7 +35,7 @@ if (res.status===422 || !data) {
     console.log("invalid")
 }
 else{
-    window.alert("succes")
+    window.alert("Registration successful")
     console.log("succes")
      
     navigate("/login")
